@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -33,7 +35,7 @@ public void connectToDatabase() {
 }
 @Parameters("browser")
 @BeforeTest
-public void launchBrowser(String BROWSER) throws IOException {
+public void launchBrowser (@Optional("chrome") String BROWSER) throws IOException {
 	if (BROWSER.equals("chrome")) {
 		driver = new ChromeDriver();
 	} else if (BROWSER.equals("firefox")) {
@@ -77,5 +79,37 @@ public void closeBrowser() {
 @AfterSuite
 public void disconnectedWithDatabase() {
 	Reporter.log("database is disconnected",true);
+}
+public void onTestStart(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onTestSuccess(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onTestFailure(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onStart(ITestContext context) {
+	// TODO Auto-generated method stub
+	
+}
+public void onTestFailedWithTimeout(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onTestSkipped(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+	// TODO Auto-generated method stub
+	
+}
+public void onFinish(ITestContext context) {
+	// TODO Auto-generated method stub
+	
 }
 }

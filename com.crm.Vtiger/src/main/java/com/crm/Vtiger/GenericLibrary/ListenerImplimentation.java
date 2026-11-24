@@ -63,13 +63,13 @@ public class ListenerImplimentation extends BaseClass implements ITestListener{
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
+		//ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
 		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailedWithTimeout(result);
+		//ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
 	@Override
